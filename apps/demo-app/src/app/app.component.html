@@ -1,2 +1,26 @@
-<salman-demo-nx-welcome></salman-demo-nx-welcome>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/demo1']">Demo 1</a>
+        <!-- Add more demos as needed -->
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span class="title">Demo App</span>
+      </mat-toolbar>
+  
+      <!-- Routing Outlet -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

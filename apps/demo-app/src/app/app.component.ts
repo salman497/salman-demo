@@ -1,10 +1,13 @@
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { Component } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule, RouterModule],
   selector: 'salman-demo-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
